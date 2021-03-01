@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src ="script.js"></script>
+
+</head>
+
+<body onload='hideTotal()'>
+    <script src ="script.js"></script>
+
+    <div id="wrap">
+        <form action="" id="cake" onsubmit="return false;">
+        <div>
+            <div class="cont_order">
+               <fieldset>
+                <legend>Cake Calculator</legend>
+                <label >Size Of the Cake</label>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round6" onclick="calculateTotal()" />option 1</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round8" onclick="calculateTotal()" />all of these are worth zero</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round10" onclick="calculateTotal()" />don't worry</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round12" onclick="calculateTotal()" />option 3</label><br/>
+                <br/>
+                <label >Cake's IQ(Education)</label>
+         
+                <select id="edu" name='edu' onchange="calculateTotal()">
+                <option value="Select">Select </option>
+                <option value="optionone">option 1($1)</option>
+                <option value="optiontwo">option 2($2)</option>
+                <option value="optionthree">option 3 ($3)</option>
+                <option value="option4">option 4($4)</option>
+               </select>
+                <br/>
+                <p>
+                <label for='includecandles' class="inlinelabel">Include Candles($5)</label>
+               <input type="checkbox" id="includecandles" name='includecandles' onclick="calculateTotal()" />
+               <input type="text"  id="numofcandles" name="numofcandles" value="# of candles"  />
+                  </p> 
+
+                <p>
+                <label class="inlinelabel" for='includeinscription'>Include Inscription($6)</label>
+                <input type="checkbox" id="includeinscription" name="includeinscription" onclick="calculateTotal()" />
+                <input type="text"  id="theinscription" name="theinscription" value="Type your inscription here"  />
+                </p>
+                <div id="totalPrice"></div>
+                
+                </fieldset>
+            </div>
+            
+        	<div class="cont_details">
+            	<fieldset>
+                <legend>Contact Details</legend>
+                <label for='name'>Name</label>
+                <input type="text" id="name" name='name' />
+                <br/>
+                <label for='address'>Address</label>
+                <input type="text" id="address" name='address' />
+                <br/>
+                <label for='phonenumber'>Phone Number</label>
+                <input type="number"  id="phonenumber" name='phonenumber'/>
+                <br/>
+                </fieldset>
+            </div>
+            <input type='submit' id='submit' value='Submit' onclick="calculateTotal()" />
+        </div>  
+       </form>
+	</div><!--End of wrap-->
+
+</body>
+
